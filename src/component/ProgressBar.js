@@ -16,7 +16,8 @@ function ProgressBar({value = 0}) {
     <div className='progressbar'>
 
       <span  style={{color:percent > 49 ? 'white' : 'black'}}> {percent.toFixed()}%</span>
-      <div style={{width:`${percent}%` } }></div>
+      {/* <div style={{width:`${percent}%` } }></div> */}
+      <div style={{transform:`scaleX(${percent / 100})` , transformOrigin:'left'}}></div>
 
     </div>
   )
